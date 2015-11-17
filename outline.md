@@ -10,3 +10,5 @@ We want our predicted variable to be 1-dimensional - a classification of two sid
 
 1. The minimum distance between the two sidewalks - i.e. how close together are the closest points between the sidewalks.
 2. The angle between the two sidewalks - we get angles for individual sidewalks based on the vector pointing out of the end.
+
+Each row is therefore a relationship between each sidewalk and every other sidewalk. We therefore want to do a cross join.
