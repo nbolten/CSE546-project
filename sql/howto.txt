@@ -8,3 +8,8 @@ The database is expected to have these tables of source data:
     `v_sidewalks` from SDOT shapefile
 
 The column names of that source data are auto-generated from their shapefile attribute names.
+
+The table can be exported to a CSV using export.sql
+
+I uploaded the CSV directly to google drive (from the remote SQL server) using the gdrive client:
+    ./drive-linux-x64 upload --file learndata-latest.csv
