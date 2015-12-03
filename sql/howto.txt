@@ -1,0 +1,10 @@
+For debugging, run each script separately using:
+    psql -d <dbname> -U <user> -W -f ./<script_file.sql>
+
+To run all at once, you could concatenate them together (using `cat`) first.
+
+The database is expected to have these tables of source data:
+    `streets` from SDOT shapefile
+    `v_sidewalks` from SDOT shapefile
+
+The column names of that source data are auto-generated from their shapefile attribute names.

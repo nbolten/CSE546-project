@@ -179,7 +179,7 @@ CREATE TABLE learndata AS SELECT 0 as connected,
                                  sj.surftype AS surftype_j,
                                  ST_Distance(si.wkb_geometry, sj.wkb_geometry) AS distance,
                                  ST_Intersects(si.wkb_geometry, sj.wkb_geometry) AS intersects,
-                                 angle_between(si.wkb_geometry::geometry, sj.wkb_geometry::geometry) AS angle,
+                                 angle_between(si.wkb_geometry::geometry, sj.wkb_geometry::geometry) AS angle
                             FROM v_sidewalks AS si
                       INNER JOIN v_sidewalks AS sj
                               ON ST_DWithin(si.wkb_geometry, sj.wkb_geometry, 100)
