@@ -90,19 +90,19 @@ UPDATE grouped_sidewalks
  WHERE grouped_sidewalks.s_id = query.s_id;
 */
 
--- Update learndata to include si_bid and sj_bid
-ALTER TABLE learndata DROP COLUMN IF EXISTS bid_i;
-ALTER TABLE learndata ADD COLUMN bid_i integer;
-ALTER TABLE learndata DROP COLUMN IF EXISTS bid_j;
-ALTER TABLE learndata ADD COLUMN bid_j integer;
+-- Update nearby_sidewalks to include si_bid and sj_bid
+ALTER TABLE nearby_sidewalks DROP COLUMN IF EXISTS bid_i;
+ALTER TABLE nearby_sidewalks ADD COLUMN bid_i integer;
+ALTER TABLE nearby_sidewalks DROP COLUMN IF EXISTS bid_j;
+ALTER TABLE nearby_sidewalks ADD COLUMN bid_j integer;
 
 -- TODO: make this step faster. Maybe by dropping indices first?
-UPDATE learndata AS l
+UPDATE nearby_sidewalks AS l
    SET bid_i = g.b_id
   FROM grouped_sidewalks AS g
  WHERE l.id_i = g.s_id;
 
-UPDATE learndata AS l
+UPDATE nearby_sidewalks AS l
    SET bid_j = g.b_id
   FROM grouped_sidewalks AS g
  WHERE l.id_j = g.s_id;

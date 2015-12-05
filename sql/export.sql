@@ -1,1 +1,1 @@
-\copy learndata TO 'learndata-latest.csv' CSV HEADER
+\copy nearby_sidewalks TO 'learndata-latest.csv' CSV HEADER

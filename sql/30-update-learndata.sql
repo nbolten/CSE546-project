@@ -1,8 +1,4 @@
-\timing
-/*SET LOCAL synchronous_commit TO OFF;*/
-UPDATE learndata AS l
+UPDATE nearby_sidewalks AS nb
    SET connected = 1
-  FROM (SELECT * FROM connections) AS c
-  /*FROM (SELECT * FROM connections LIMIT 2) AS c*/
- WHERE l.id_i = c.id_i AND l.id_j = c.id_j;
-/*SET LOCAL synchronous_commit TO ON;*/
+  FROM connections AS c
+ WHERE nb.id_i = c.id_i AND nb.id_j = c.id_j;
