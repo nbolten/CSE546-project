@@ -3,7 +3,7 @@
 --        but it's fast to generate this data early (just b_id)
 
 -- Create smaller 'learnstreets' table as subselection of streets (raw data)
-DROP TABLE if exists learnstreets;
+DROP TABLE IF EXISTS learnstreets;
 
 CREATE TABLE learnstreets AS SELECT compkey AS id,
                                -- FIXME: LineMerge has undesired behavior of stitching together
