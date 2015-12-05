@@ -91,10 +91,6 @@ CREATE TABLE vector_pairs AS SELECT id_i,
                                     end_vec_i AS vec1,
                                     end_vec_j AS vec2
                                FROM nearby_sidewalks;
--- INSERT INTO vector_pairs SELECT id_i, id_j, start_vec_i, end_vec_j FROM nearby_sidewalks;
--- INSERT INTO vector_pairs SELECT id_i, id_j, end_vec_i, end_vec_j FROM nearby_sidewalks;
--- INSERT INTO vector_pairs SELECT id_i, id_j, end_vec_i, end_vec_j FROM nearby_sidewalks;
-
 
 /*
 Copy distance, angle, and intersection if they correspond to end vectors that
@@ -200,3 +196,5 @@ UPDATE nearby_sidewalks
            near_distance = ST_Distance(near_vec_i, near_vec_j),
        near_intersection = intersection(near_vec_i, near_vec_j),
                near_line = ST_MakeLine(ST_EndPoint(near_vec_i), ST_EndPoint(near_vec_i));
+
+-- FIXME: Use near_intersection to make more metrics
