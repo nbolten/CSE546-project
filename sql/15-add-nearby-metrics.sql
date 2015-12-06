@@ -127,4 +127,4 @@ ALTER TABLE nearby_sidewalks ADD COLUMN near_angle double precision,
 UPDATE nearby_sidewalks
    SET        near_angle = angle_between(near_vec_i, near_vec_j),
            near_distance = ST_Distance(ST_EndPoint(near_vec_i), ST_EndPoint(near_vec_j)),
-               near_line = ST_MakeLine(ST_EndPoint(near_vec_i), ST_EndPoint(near_vec_i));
+               near_line = ST_MakeLine(ST_EndPoint(near_vec_i), ST_EndPoint(near_vec_j));

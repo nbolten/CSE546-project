@@ -15,7 +15,8 @@ CREATE VIEW learndata AS SELECT connected,
                                 intersects,
                                 near_angle,
                                 near_distance,
-                                near_line,
+                                ST_AsText(ST_Transform(near_line, 4326)) AS near_line,
+                                4326 near_line_srid,
                                 bid_i,
                                 bid_j
                            FROM nearby_sidewalks;
