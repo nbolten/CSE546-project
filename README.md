@@ -5,13 +5,16 @@ Nick Bolten and Sumit Mukherjee (equal partners!)
 
 ## Overview
 
+More descriptions to come.
+
+In the meantime, view the most recent 'errors' (false positives and false negatives)
+at [at this github-mapped geojson file](https://github.com/nbolten/CSE546-project/blob/master/learndata-errors-thick.geojson).
+
 ## TODO
 
 #### Nick
 
-* Add block ID feature(s)
 * Add intersection-related features
-* Generate visuals (maps!) of results
 * Look into crowdsourcing method for getting labeled train+test dataset
 
 #### Sumit
