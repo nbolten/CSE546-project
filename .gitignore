@@ -1,3 +1,9 @@
 *.swp
 
 *.csv
+
+*.shp
+*.dbf
+*.cpg
+*.prj
+*.shx
