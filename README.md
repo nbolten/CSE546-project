@@ -5,7 +5,7 @@ Nick Bolten and Sumit Mukherjee (equal partners!)
 
 ## Overview
 
-More descriptions to come.
+This is an extension to the AccessMap project (www.accessmapseattle.com). More descriptions to come.
 
 In the meantime, view the most recent 'errors' (false positives and false negatives)
 at [at this github-mapped geojson file](https://github.com/nbolten/CSE546-project/blob/master/learndata-errors.geojson). Red lines are false positives and blue lines are false negatives.
