@@ -16,6 +16,9 @@ at [at this github-mapped geojson file](https://github.com/nbolten/CSE546-projec
 
 ## TODO
 
+* Mock up learning problem that addresses the 'T' intersections or preprocess them away.
+* Remove labels that intersect the street? Common false negatives cross the street.
+
 #### Nick
 
 * Explode the sidewalk MultiLineStrings, regenerate ground truth + our training data from it. This will prevent errors related to running ST_LineMerge on our data (weirdly-connected geometries).
@@ -23,3 +26,9 @@ at [at this github-mapped geojson file](https://github.com/nbolten/CSE546-projec
 * Look into crowdsourcing method for getting labeled train+test dataset
 
 #### Sumit
+
+
+## Feature Ideas
+* Whether one of the sidewalks intersects a street all by itself (could help rule out false negatives where 'intersects_street' is true but it's due to the sidewalks being inaccurate).
+* Average distance to nearest street intersection
+* 
